@@ -1,26 +1,51 @@
 # Playwright Checkout Automation
 
 ## 🧩 About
-This project automates a complete checkout flow in [Practice Software Testing](https://practicesoftwaretesting.com):
-- Navigate to base url
-- Add product to cart
-- Navigate to the cart page
-- Login during checkout
-- Add shipment information
-- Complete payment
-- Validate invoice information
+This project automates the complete checkout flow on [Practice Software Testing](https://practicesoftwaretesting.com).  
+The automated test covers the following steps:
+1. Navigate to the website
+2. Add a product to the cart
+3. Go to the cart page
+4. Log in during checkout
+5. Enter shipment information
+6. Complete the payment process
+7. Validate the invoice information on the confirmation page
 
 ## 🧰 Tech Stack
 - [Playwright](https://playwright.dev/)
 - Node.js 18+
-- TypeScript/JavaScript
+- JavaScript / TypeScript
+
+## ⚙️ Setup
+### 1. Clone the repository
+```
+git clone https://github.com/<your-username>/playwright-checkout-automation.git
+cd playwright-checkout-automation
+```
+### 2. Install dependencies
+Make sure you have Node.js 18+ installed, then run:
+```
+npm install
+```
+
+### 3. Install Playwright browsers
+Playwright needs to download browser binaries (Chromium, Firefox, WebKit). Run:
+```
+npx playwright install
+```
 
 ## ▶️ Run the test
+To execute the checkout test, run:
+```
 npx playwright test checkout.spec.js
-  - "--project=chromium" can be used to run only in Chrome
-  - "--headed" can be used to have the Chrome window always visible during the test run
-  - "--debug" activates the debug mode during the test run
+```
+Optional flags:
+- --project=chromium → run only on Chrome
+- --headed → show the browser UI during execution
+- --debug → enable Playwright debug mode
 
 ## 🧪 Generate report
-Use the following command  line to view the report:<br>
+To open the Playwright HTML test report:<br>
+```
 npx playwright show-report
+```
