@@ -11,7 +11,7 @@ test('Cart Page - proceed to checkout (Sign in during checkout) ', async ({ page
     const card_holder_name = 'Jack Howe';
     let my_locator;
 
-    // Step 0 (pre condition): Navigate to baseURL and add a product to the cart
+    // Step 0 (pre condition): Navigate to baseURL and add a product to the cart.
     await page.goto(baseUrl);
     //wait until the fisrt product is visible and click it
     const firstProduct = page.locator('[data-test^="product-"]').first();
